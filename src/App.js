@@ -16,7 +16,7 @@ function App() {
   // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'skills', 'experience', 'projects', 'education'];
+      const sections = ['about', 'education', 'skills', 'experience', 'projects'];
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -47,6 +47,12 @@ function App() {
             About
           </button>
           <button 
+            className={activeSection === 'education' ? 'active' : ''} 
+            onClick={() => scrollToSection('education')}
+          >
+            Education
+          </button>
+          <button 
             className={activeSection === 'skills' ? 'active' : ''} 
             onClick={() => scrollToSection('skills')}
           >
@@ -63,12 +69,6 @@ function App() {
             onClick={() => scrollToSection('projects')}
           >
             Projects
-          </button>
-          <button 
-            className={activeSection === 'education' ? 'active' : ''} 
-            onClick={() => scrollToSection('education')}
-          >
-            Education
           </button>
         </div>
       </nav>
@@ -102,6 +102,45 @@ function App() {
                   <a href="https://linkedin.com/in/mattmanik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   <a href="https://github.com/matt-manik" target="_blank" rel="noopener noreferrer">GitHub</a>
                   <a href="https://zealandrio.com" target="_blank" rel="noopener noreferrer">Website</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section id="education" className="section">
+          <div className="section-container">
+            <h2 className="section-title">Education</h2>
+            <div className="education-timeline">
+              {/* Montgomery College */}
+              <div className="timeline-item">
+                <div className="timeline-content">
+                  <div className="education-logo">
+                    <div className="mc-logo">MC</div>
+                  </div>
+                  <div className="education-details">
+                    <h3>Montgomery College</h3>
+                    <p className="degree">Associate of Arts, Information Science</p>
+                    <p className="date">August 2020 - December 2022</p>
+                    <p className="gpa">GPA: 3.8</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* University of Maryland */}
+              <div className="timeline-item">
+                <div className="timeline-content">
+                  <div className="education-logo">
+                    <div className="umd-logo">UMD</div>
+                  </div>
+                  <div className="education-details">
+                    <h3>University of Maryland</h3>
+                    <p className="degree">Bachelor of Science, Information Science</p>
+                    <p className="date">January 2023 - December 2024</p>
+                    <p className="gpa">GPA: 4.0</p>
+                    <p className="honors">Summa Cum Laude</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,35 +291,6 @@ function App() {
                   <span>JSON</span>
                   <span>OOP</span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Education Section */}
-        <section id="education" className="section">
-          <div className="section-container">
-            <h2 className="section-title">Education</h2>
-            <div className="education-item">
-              <div className="education-logo">
-                <div className="umd-logo">UMD</div>
-              </div>
-              <div className="education-details">
-                <h3>University of Maryland – College Park</h3>
-                <p className="degree">Bachelor of Science, Information Science</p>
-                <p className="date">January 2023 - December 2024</p>
-                <p className="gpa">GPA: 4.0</p>
-              </div>
-            </div>
-            <div className="education-item">
-              <div className="education-logo">
-                <div className="mc-logo">MC</div>
-              </div>
-              <div className="education-details">
-                <h3>Montgomery College Rockville Campus</h3>
-                <p className="degree">Associate of Arts, Information Science</p>
-                <p className="date">August 2020 - December 2022</p>
-                <p className="gpa">GPA: 3.8</p>
               </div>
             </div>
           </div>
