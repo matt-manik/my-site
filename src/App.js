@@ -3,6 +3,8 @@ import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
+  const [scrollY, setScrollY] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // Handle smooth scrolling when navigation links are clicked
   const scrollToSection = (sectionId) => {
@@ -17,6 +19,7 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['about', 'education', 'skills', 'experience', 'projects'];
+      setScrollY(window.scrollY);
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -34,8 +37,13 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Set isLoaded to true after component mounts
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
-    <div className="app">
+    <div className={`app ${isLoaded ? 'loaded' : ''}`}>
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="nav-brand">Matthew Manik</div>
@@ -295,12 +303,12 @@ function App() {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="footer">
-          <p>© 2025 Matthew Manik. All Rights Reserved.</p>
-        </footer>
       </div>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} Matthew Manik. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
