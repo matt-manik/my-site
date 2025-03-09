@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import profileImage from './assets/profile.png';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
@@ -88,10 +89,7 @@ function App() {
           <div className="section-container">
             <div className="profile-container">
               <div className="profile-image">
-                {/* Replace with your actual image */}
-                <div className="placeholder-image">
-                  <span>Your Photo Here</span>
-                </div>
+                <img src={profileImage} alt="Matthew Manik" />
               </div>
               <div className="profile-text">
                 <h1>Hi, I'm Matthew Manik</h1>
@@ -109,7 +107,6 @@ function App() {
                 <div className="social-links">
                   <a href="https://linkedin.com/in/mattmanik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   <a href="https://github.com/matt-manik" target="_blank" rel="noopener noreferrer">GitHub</a>
-                  <a href="https://zealandrio.com" target="_blank" rel="noopener noreferrer">Website</a>
                 </div>
               </div>
             </div>
@@ -247,58 +244,81 @@ function App() {
         <section id="projects" className="section">
           <div className="section-container">
             <h2 className="section-title">Projects</h2>
-            <div className="projects-grid">
-              <div className="project-card">
-                <h3>SQL Database Development</h3>
+            <div className="projects-list">
+              <div className="project-item">
+                <div className="project-header">
+                  <h3>
+                    <a href="https://github.com/matt-manik/electric_vehicles" target="_blank" rel="noopener noreferrer">
+                      SQL Database Development
+                    </a>
+                  </h3>
+                  <div className="project-skills">
+                    <span>SQL</span>
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>MySQL Workbench</span>
+                  </div>
+                </div>
                 <p>
                   Led a team to develop an optimized database, reducing a 30,000-row dataset by 98% and 
                   improving query execution speed by 30%.
                 </p>
-                <div className="project-skills">
-                  <span>SQL</span>
-                  <span>Python</span>
-                  <span>Pandas</span>
-                  <span>MySQL Workbench</span>
-                </div>
               </div>
-              <div className="project-card">
-                <h3>AWS Web Hosting</h3>
+
+              <div className="project-item">
+                <div className="project-header">
+                  <h3>AWS Web Hosting</h3>
+                  <div className="project-skills">
+                    <span>AWS</span>
+                    <span>CloudFront</span>
+                    <span>S3</span>
+                    <span>SSL/TLS</span>
+                  </div>
+                </div>
                 <p>
                   Built a secure, high-performance static website using AWS CloudFront, S3, and SSL/TLS encryption, 
                   optimizing for global accessibility.
                 </p>
-                <div className="project-skills">
-                  <span>AWS</span>
-                  <span>CloudFront</span>
-                  <span>S3</span>
-                  <span>SSL/TLS</span>
-                </div>
               </div>
-              <div className="project-card">
-                <h3>Tableau Dashboard for Aviation Safety</h3>
+
+              <div className="project-item">
+                <div className="project-header">
+                  <h3>
+                    <a href="https://public.tableau.com/app/profile/matthew.manik/viz/HumanErrorinAircraftAccidents/FinalStory" target="_blank" rel="noopener noreferrer">
+                      Tableau Dashboard for Aviation Safety
+                    </a>
+                  </h3>
+                  <div className="project-skills">
+                    <span>Tableau</span>
+                    <span>Python</span>
+                    <span>Excel</span>
+                    <span>Data Visualization</span>
+                  </div>
+                </div>
                 <p>
                   Analyzed aviation accidents data (1962-2022), creating interactive visualizations of 
                   accident trends and geographical hotspots.
                 </p>
-                <div className="project-skills">
-                  <span>Tableau</span>
-                  <span>Python</span>
-                  <span>Excel</span>
-                  <span>Data Visualization</span>
-                </div>
               </div>
-              <div className="project-card">
-                <h3>Uno: Defense Edition</h3>
+
+              <div className="project-item">
+                <div className="project-header">
+                  <h3>
+                    <a href="https://github.com/wdelmo5123/UNO-INST326-Final-Project" target="_blank" rel="noopener noreferrer">
+                      Uno: Defense Edition
+                    </a>
+                  </h3>
+                  <div className="project-skills">
+                    <span>Python</span>
+                    <span>Git</span>
+                    <span>JSON</span>
+                    <span>OOP</span>
+                  </div>
+                </div>
                 <p>
                   Led development of a strategic card game, implementing collaborative development practices 
                   and advanced Python features.
                 </p>
-                <div className="project-skills">
-                  <span>Python</span>
-                  <span>Git</span>
-                  <span>JSON</span>
-                  <span>OOP</span>
-                </div>
               </div>
             </div>
           </div>
