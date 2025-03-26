@@ -100,8 +100,8 @@ function App() {
                   finding insights that drive business decisions.
                 </p>
                 <div className="contact-info">
-                  <p><i className="icon">📧</i> zealandrio@gmail.com</p>
-                  <p><i className="icon">📱</i> 301-917-4772</p>
+                  <p><i className="icon">📧</i> zealandrio[at]gmail[dot]com</p>
+                  
                   <p><i className="icon">📍</i> D.C. Metro Area</p>
                 </div>
                 <div className="social-links">
